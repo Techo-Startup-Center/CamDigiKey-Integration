@@ -1,0 +1,1 @@
+{"version":3,"file":"InvalidCertificateChainError.js","sourceRoot":"","sources":["../../src/error/InvalidCertificateChainError.ts"],"names":[],"mappings":";;;;;AAAA,4DAAoC;AACpC,2CAAwC;AAExC,MAAqB,4BAA6B,SAAQ,mBAAS;IACjE,YAAY,OAAe;QACzB,KAAK,CAAC,OAAO,EAAE,qBAAS,CAAC,yBAAyB,CAAC,CAAC;QACpD,MAAM,CAAC,cAAc,CAAC,IAAI,EAAE,4BAA4B,CAAC,SAAS,CAAC,CAAC;IACtE,CAAC;CACF;AALD,+CAKC"}

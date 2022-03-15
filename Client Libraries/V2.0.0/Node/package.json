@@ -1,0 +1,27 @@
+{
+  "name": "camdigikey-client-node",
+  "version": "2.0.0",
+  "description": "CamDigiKey Client Library",
+  "types": "lib/index.d.ts",
+  "main": "lib/index",
+  "scripts": {
+    "example": "node example/example.js",
+    "test": "jest"
+  },
+  "author": "Techo Startup Center",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/lokijs": "^1.5.7",
+    "@types/node-forge": "^1.0.1",
+    "@types/request": "^2.48.8",
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "lokijs": "^1.5.12",
+    "node-forge": "^1.2.1",
+    "request": "^2.88.2"
+  }
+}

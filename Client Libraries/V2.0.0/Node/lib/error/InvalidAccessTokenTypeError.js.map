@@ -1,0 +1,1 @@
+{"version":3,"file":"InvalidAccessTokenTypeError.js","sourceRoot":"","sources":["../../src/error/InvalidAccessTokenTypeError.ts"],"names":[],"mappings":";;;;;AAAA,4DAAoC;AACpC,2CAAwC;AAExC,MAAqB,2BAA4B,SAAQ,mBAAS;IAChE,YAAY,OAAe;QACzB,KAAK,CAAC,OAAO,EAAE,qBAAS,CAAC,yBAAyB,CAAC,CAAC;QACpD,MAAM,CAAC,cAAc,CAAC,IAAI,EAAE,2BAA2B,CAAC,SAAS,CAAC,CAAC;IACrE,CAAC;CACF;AALD,8CAKC"}

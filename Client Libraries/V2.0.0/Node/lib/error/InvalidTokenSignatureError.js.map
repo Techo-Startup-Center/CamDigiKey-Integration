@@ -1,0 +1,1 @@
+{"version":3,"file":"InvalidTokenSignatureError.js","sourceRoot":"","sources":["../../src/error/InvalidTokenSignatureError.ts"],"names":[],"mappings":";;;;;AAAA,4DAAoC;AACpC,2CAAwC;AAExC,MAAqB,0BAA2B,SAAQ,mBAAS;IAC/D,YAAY,OAAe;QACzB,KAAK,CAAC,OAAO,EAAE,qBAAS,CAAC,uBAAuB,CAAC,CAAC;QAClD,MAAM,CAAC,cAAc,CAAC,IAAI,EAAE,0BAA0B,CAAC,SAAS,CAAC,CAAC;IACpE,CAAC;CACF;AALD,6CAKC"}
