@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `./.env`,
+  path: `.env`,
 });
 const { CamDigiKeyClient } = require('../lib');
 
@@ -21,7 +21,7 @@ test('Get Login Token Test', async () => {
 /* --- 2 --- */
 test('Get User Access Token Test', async () => {
   // Open login URL in web browser and scan QR code with CamDigiKey, then copy `authToken` to here
-  const authToken = 'eyJleHBpcnlEYXRlIjoxNjQ3MzMzNjM1MzEyLCJ0eXAiOiJKV1QiLCJhbGciOiJTSEE1MTJ3aXRoRUNEU0EifQ==.JHpZFFPLooOlHZhydJ-6Nz9iEwkBlDsssbq1qX1lZJryrn-iMBfbxXCXVmxLctggoSO6yCymHwXBkUTcl_LJqg==.MIGIAkIB3ZmoB4ZmjNrPXm_qEy28B908eDbJP4taz2oRzYkzq11cAF_5TfQS-gfCUYU5Zpy67T56jFbQ-6qQavLJbL7AQ4ECQgFAK8RjfJLL6S6xxjB4r1ALbWWwdXnPdr09LGc44Qo1xidZrrvgdT0bNCfbQb0NQ7JQa6GLbuTaYfc1O5ODB7Udmw==';
+  const authToken = 'eyJleHBpcnlEYXRlIjoxNjQ3ODI5NjM2MjM5LCJ0eXAiOiJKV1QiLCJhbGciOiJTSEE1MTJ3aXRoRUNEU0EifQ%3D%3D.5O6QKhXYp26G-qZpR33rRFLH4dOdlFFLOIvj8xm0lr1kUoiOnEU5r59RFs8W2UGd0YL7_HQ9fdhtZMMMmyCQSQ%3D%3D.MIGIAkIBCEWkV0h3sd-d4T81wDbcYSXccwdyFA6WPd_b9FxfigFhqva6bAQb20MkXT9511eZ8m1GJhTdMhHm0EE-sBVmyrwCQgETcHsJjD2xNBcJqX86MLq0vAbf9VzlJjtzZZVCYQp8_-xwlMWQTpwHoYJFFwOrPylfDoCARt-xXHgoIvFbJxPHzw%3D%3D';
   const res = await CamDigiKeyClient.getUserAccessToken(authToken)
   expect(res.error).toEqual(0);
   expect(res.data.accessToken).not.toBeNull();

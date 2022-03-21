@@ -19,11 +19,11 @@ Setup Environment Variables
 CAMDIGIKEY_CLIENT_ID="<client_id>"              # provided by us
 CAMDIGIKEY_HMAC_KEY="<hmac_key>"                # provided by us
 CAMDIGIKEY_AES_SECRET_KEY="<secret_key>"        # privided by us
-CAMDIGIKEY_AES_IV_PARAMS="<iv_param>"            # provided by us
+CAMDIGIKEY_AES_IV_PARAMS="<iv_param>"           # provided by us
 CAMDIGIKEY_CLIENT_DOMAIN="<application_domain>"
 CAMDIGIKEY_SERVER_BASED_URL="<camdigikey_url>"
-# CamDigiKey URL Dev : https://mobileid-client.pki.camdx.io:8443
-# CamDigiKey URL Prod: https://camdigikey.camdx.gov.kh:8443
+# CamDigiKey URL Dev : https://mobile-id.demo.camdx.io:8444
+# CamDigiKey URL Prod: https://camdigikey.camdx.gov.kh:8444
 
 # CamDigiKey Client Connection KeyStore File Configuration
 CAMDIGIKEY_CLIENT_KEYSTORE_FILE="./path_to_keystore.p12"

@@ -1,0 +1,11 @@
+export declare const CAMDIGIKEY_API: {
+    LOGIN_TOKEN_REQUEST_URL: string;
+    ACCESS_TOKEN_REQUEST_URL: string;
+    ACCESS_TOKEN_STATUS_URL: string;
+    ORG_ACCESS_TOKEN_URL: string;
+    LOGOUT_USER_ACCESS_TOKEN_URL: string;
+    LOOKUP_USER_PROFILE: string;
+    VERIFY_USER_PROFILE: string;
+    ACCESS_TOKEN_REFRESH_URL: string;
+    ACCESS_TOKEN_CERT_URL: string;
+};

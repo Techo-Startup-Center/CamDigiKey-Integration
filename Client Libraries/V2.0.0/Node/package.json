@@ -5,7 +5,6 @@
   "types": "lib/index.d.ts",
   "main": "lib/index",
   "scripts": {
-    "example": "node example/example.js",
     "test": "jest"
   },
   "author": "Techo Startup Center",
