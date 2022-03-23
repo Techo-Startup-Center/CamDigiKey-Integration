@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "f1ad253e-a36a-4085-8b5b-230f9b27c5aa",
+		"name": "CamDigiKey-Kyc-OpenAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ocr-Idcard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idImage\" : \"base_64_content\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev-server}}/api/2.0/kyc/ocr-idcard",
+					"host": [
+						"{{dev-server}}"
+					],
+					"path": [
+						"api",
+						"2.0",
+						"kyc",
+						"ocr-idcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify-Info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idNumber\" : \"id_number\",\r\n    \"firstNameKh\" : \"first_name_kh\",\r\n    \"lastNameKh\" : \"last_name_kh\",\r\n    \"firstNameEn\" : \"first_name_en\",\r\n    \"lastNameEn\" : \"last_name_en\",\r\n    \"gender\" : \"M_or_F\",\r\n    \"dob\" : \"yyyy-MM-dd\",\r\n    \"issuedDate\" : \"yyyy-MM-dd\",\r\n    \"expiredDate\" : \"yyyy-MM-dd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev-server}}/api/2.0/kyc/info",
+					"host": [
+						"{{dev-server}}"
+					],
+					"path": [
+						"api",
+						"2.0",
+						"kyc",
+						"info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "VerifyInfo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idNumber\" : \"id_number\",\r\n    \"firstNameKh\" : \"first_name_kh\",\r\n    \"lastNameKh\" : \"last_name_kh\",\r\n    \"firstNameEn\" : \"first_name_en\",\r\n    \"lastNameEn\" : \"last_name_en\",\r\n    \"gender\" : \"M_or_F\",\r\n    \"dob\" : \"yyyy-MM-dd\",\r\n    \"issuedDate\" : \"yyyy-MM-dd\",\r\n    \"expiredDate\" : \"yyyy-MM-dd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-server}}/api/2.0/plain/kyc/info",
+							"host": [
+								"{{dev-server}}"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"plain",
+								"kyc",
+								"info"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Mar 2022 03:49:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"error\": 0,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"idNumber\": \"id_number\",\n        \"score\": 1,\n        \"incorrectFields\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Verify-Info-Face-Idcard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userInfo\" : {\r\n        \"idNumber\" : \"id_number\",\r\n        \"firstNameKh\" : \"first_name_kh\",\r\n        \"lastNameKh\" : \"last_name_kh\",\r\n        \"firstNameEn\" : \"first_name_en\",\r\n        \"lastNameEn\" : \"last_name_en\",\r\n        \"gender\" : \"M_or_F\",\r\n        \"dob\" : \"yyyy-MM-dd\",\r\n        \"issuedDate\" : \"yyyy-MM-dd\",\r\n        \"expiredDate\" : \"yyyy-MM-dd\"\r\n    },\r\n    \"faceImg\" : \"base_64_content\",\r\n    \"idImage\" : \"base_64_content\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev-server}}/api/2.0/kyc/info-face-idcard",
+					"host": [
+						"{{dev-server}}"
+					],
+					"path": [
+						"api",
+						"2.0",
+						"kyc",
+						"info-face-idcard"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "VerifyFace",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userInfo\" : {\r\n        \"idNumber\" : \"id_number\",\r\n        \"firstNameKh\" : \"first_name_kh\",\r\n        \"lastNameKh\" : \"last_name_kh\",\r\n        \"firstNameEn\" : \"first_name_en\",\r\n        \"lastNameEn\" : \"last_name_en\",\r\n        \"gender\" : \"M_or_F\",\r\n        \"dob\" : \"yyyy-MM-dd\",\r\n        \"issuedDate\" : \"yyyy-MM-dd\",\r\n        \"expiredDate\" : \"yyyy-MM-dd\"\r\n    },\r\n    \"faceImg\" : \"base_64_content\",\r\n    \"idImage\" : \"base_64_content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-server}}/api/2.0/kyc/info-face-idcard",
+							"host": [
+								"{{dev-server}}"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"kyc",
+								"info-face-idcard"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Mar 2022 03:52:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"error\": 0,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"userInfo\": {\n            \"idNumber\": \"id_number\",\n            \"score\": 1,\n            \"incorrectFields\": []\n        },\n        \"faceDocumentScore\": 0.9457877,\n        \"faceMoiScore\": 0.9792682\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Verify-Info-Face",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userInfo\" : {\r\n        \"idNumber\" : \"id_number\",\r\n        \"firstNameKh\" : \"first_name_kh\",\r\n        \"lastNameKh\" : \"last_name_kh\",\r\n        \"firstNameEn\" : \"first_name_en\",\r\n        \"lastNameEn\" : \"last_name_en\",\r\n        \"gender\" : \"M_or_F\",\r\n        \"dob\" : \"yyyy-MM-dd\",\r\n        \"issuedDate\" : \"yyyy-MM-dd\",\r\n        \"expiredDate\" : \"yyyy-MM-dd\"\r\n    },\r\n    \"faceImg\" : \"base_64_content\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev-server}}/api/2.0/kyc/info-face",
+					"host": [
+						"{{dev-server}}"
+					],
+					"path": [
+						"api",
+						"2.0",
+						"kyc",
+						"info-face"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "VerifyInfoFace",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userInfo\" : {\r\n        \"idNumber\" : \"id_number\",\r\n        \"firstNameKh\" : \"first_name_kh\",\r\n        \"lastNameKh\" : \"last_name_kh\",\r\n        \"firstNameEn\" : \"first_name_en\",\r\n        \"lastNameEn\" : \"last_name_en\",\r\n        \"gender\" : \"M_or_F\",\r\n        \"dob\" : \"yyyy-MM-dd\",\r\n        \"issuedDate\" : \"yyyy-MM-dd\",\r\n        \"expiredDate\" : \"yyyy-MM-dd\"\r\n    },\r\n    \"faceImg\" : \"base_64_content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-server}}/api/2.0/kyc/info-face",
+							"host": [
+								"{{dev-server}}"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"kyc",
+								"info-face"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Mar 2022 18:38:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": 0,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"userInfo\": {\n            \"idNumber\": \"id_number\",\n            \"score\": 1,\n            \"incorrectFields\": []\n        },\n        \"faceMoiScore\": 0.9792682\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Verify-Info-Idcard-liveness",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actions\":[\"string array of action numbers\"],\r\n    \"userInfo\" : {\r\n        \"idNumber\" : \"id_number\",\r\n        \"firstNameKh\" : \"first_name_kh\",\r\n        \"lastNameKh\" : \"last_name_kh\",\r\n        \"firstNameEn\" : \"first_name_en\",\r\n        \"lastNameEn\" : \"last_name_en\",\r\n        \"gender\" : \"M_or_F\",\r\n        \"dob\" : \"yyyy-MM-dd\",\r\n        \"issuedDate\" : \"yyyy-MM-dd\",\r\n        \"expiredDate\" : \"yyyy-MM-dd\"\r\n    },\r\n    \"idImage\" : \"base_64_content\",\r\n    \"liveness\" : \"base_64_content\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev-server}}/api/2.0/kyc/info-idcard-liveness",
+					"host": [
+						"{{dev-server}}"
+					],
+					"path": [
+						"api",
+						"2.0",
+						"kyc",
+						"info-idcard-liveness"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "VerifyLiveness",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "clientId",
+								"value": "clientId",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\":[\"string array of action numbers\"],\r\n    \"userInfo\" : {\r\n        \"idNumber\" : \"id_number\",\r\n        \"firstNameKh\" : \"first_name_kh\",\r\n        \"lastNameKh\" : \"last_name_kh\",\r\n        \"firstNameEn\" : \"first_name_en\",\r\n        \"lastNameEn\" : \"last_name_en\",\r\n        \"gender\" : \"M_or_F\",\r\n        \"dob\" : \"yyyy-MM-dd\",\r\n        \"issuedDate\" : \"yyyy-MM-dd\",\r\n        \"expiredDate\" : \"yyyy-MM-dd\"\r\n    },\r\n    \"idImage\" : \"base_64_content\",\r\n    \"liveness\" : \"base_64_content\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev-server}}/api/2.0/kyc/info-idcard-liveness",
+							"host": [
+								"{{dev-server}}"
+							],
+							"path": [
+								"api",
+								"2.0",
+								"kyc",
+								"info-idcard-liveness"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Mar 2022 05:28:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": 0,\n    \"message\": \"Successfully\",\n    \"data\": {\n        \"userInfo\": {\n            \"idNumber\": \"id_number\",\n            \"score\": 1,\n            \"incorrectFields\": []\n        },\n        \"livenessScore\": 0.9248705,\n        \"faceDocumentScore\": 0.94440883,\n        \"faceMoiScore\": 0.9769943\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local-server",
+			"value": "localhost:8444",
+			"type": "string"
+		},
+		{
+			"key": "dev-server",
+			"value": "165.22.104.17:8444",
+			"type": "string"
+		}
+	]
+}
