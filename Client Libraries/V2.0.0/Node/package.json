@@ -1,7 +1,7 @@
 {
-  "name": "camdigikey-client-node",
+  "name": "camdigikey-client",
   "version": "2.0.0",
-  "description": "CamDigiKey Client Library",
+  "description": "CamDigiKey Client Node Library",
   "types": "lib/index.d.ts",
   "main": "lib/index",
   "scripts": {
