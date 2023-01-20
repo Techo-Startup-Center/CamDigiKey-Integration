@@ -411,14 +411,10 @@
 		}
 	],
 	"variable": [
-		{
-			"key": "local-server",
-			"value": "localhost:8444",
-			"type": "string"
-		},
+		
 		{
 			"key": "dev-server",
-			"value": "165.22.104.17:8444",
+			"value": "openapi-sbx.camdigikey.gov.kh",
 			"type": "string"
 		}
 	]
