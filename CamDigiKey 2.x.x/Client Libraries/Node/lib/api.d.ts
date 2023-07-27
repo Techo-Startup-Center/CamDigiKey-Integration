@@ -8,4 +8,5 @@ export declare const CAMDIGIKEY_API: {
     VERIFY_USER_PROFILE: string;
     ACCESS_TOKEN_REFRESH_URL: string;
     ACCESS_TOKEN_CERT_URL: string;
+    RETRIEVE_FACE_URL: string;
 };

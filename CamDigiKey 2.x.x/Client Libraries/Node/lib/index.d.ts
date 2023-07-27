@@ -7,6 +7,7 @@ interface CamDigiKeyClientBase {
     logoutAccessToken(accessToken: string): Promise<Object>;
     lookupUserProfile(accessToken: string, personalCode: string): Promise<Object>;
     verifyAccountToken(accountToken: string): Promise<Object>;
+    getUserFace(accessToken: string): Promise<Object>;
 }
 export declare const CamDigiKeyClient: CamDigiKeyClientBase;
 export {};

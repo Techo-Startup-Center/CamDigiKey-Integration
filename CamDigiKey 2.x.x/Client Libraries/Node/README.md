@@ -65,4 +65,6 @@ refreshUserAccessToken(accessToken: string): Promise<Object>
 logoutAccessToken(accessToken: string): Promise<Object>
 lookupUserProfile(accessToken: string, personalCode: string): Promise<Object>
 verifyAccountToken(accountToken: string): Promise<Object>
+// New Function
+getUserFace(accessToken: string): Promise<Object>;
 ```
